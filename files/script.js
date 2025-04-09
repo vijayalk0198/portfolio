@@ -121,3 +121,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+/*=========Image SLideshow in Project section===========*/
+const containers = document.querySelectorAll('.project-image-container');
+containers.forEach(container => {
+  const images = container.querySelectorAll('.project-slideshow-image');
+  let current = 0;
+
+  setInterval(() => {
+    images[current].style.opacity = 0;
+    current = (current + 1) % images.length;
+    images[current].style.opacity = 1;
+  }, 5000);
+});

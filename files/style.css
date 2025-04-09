@@ -424,115 +424,115 @@ hr {
 
 /*================== PROJECTS SECTION STYLING ===========*/
 
-.prj{
+.project{
     padding-top: 6rem;
+    padding-bottom: 6rem;
     background-color: rgb(34, 40, 49) ;
 }
 
-.featured-projects-box h2{
-    font-size: 60px;
-    letter-spacing: 5px;
-}
-
-.featured-projects-box h2 span{
-    color: #F38851;
-}
-
-.featured-projects-box, .other-projects-box {
+.projects-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
-.project {
+.projects-container h2{
+    font-size: 60px;
+    letter-spacing: 5px;
+}
+
+.projects-container h2 span{
+    color: #F38851;
+}
+
+.project-box{
     display: flex;
-    flex-direction: row;
-    max-width: 30rem;
-    max-height: 58rem;
-    background: rgb(38, 50, 67);
-    box-shadow: 0 1rem 2rem 0 rgba(27, 27, 27, 0.1);
-    border-radius: 1.2rem;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: center; 
+    width:100%;
+    padding:0px;
 }
 
-.project-details-box {
-    padding: 2.5rem;
-    padding-bottom: 0;
-    width: 50%;
+.project-card{
+    height: auto;
+    background-color: hsl(231, 5%, 29%);
+    border-radius: 10px;
+    padding: 20px; 
+    box-sizing: border-box; 
+    justify-content: center; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
 }
 
-.project-main-info span, h3 {
-    margin: 0;
-    text-transform: uppercase;
-    font-family: 'Rubik', sans-serif;
-}
-
-.project-main-info h4{
+.project-title h4{
+    font-weight: bold;
+    text-align: left;
     background: #F38851;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
-.project-main-info p > a {
-    font-family: 'Rubik', sans-serif;
-    color: #1de4ff;
+.project-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.project-main-info p {
-    font-family: 'Rubik', sans-serif;
+.project-description{
+    flex: 0 0 45%; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+}
+
+.project-description p{
+    margin-top: 5px;
     text-align: justify;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
 }
 
-.project-icons a{
+.project-description span{
+    color: #F38851;
+}
+
+.project-description a {
     display: inline-block;
-    padding: 12px 28px;
-    background: #F38851;
-    border-radius: 40px;
-    font-size: 15px;
-    text-align: center;
-    color: #081b29;
-    letter-spacing: 1px;
+    align-self: center;
+    padding: 10px 20px; 
     text-decoration: none;
-    font-weight: 600;
+    margin-top: 10px; 
+    text-align: center;
 }
 
-.project-icons a:hover{
-    background: #F38851;
-    color: #000;
-    box-shadow: 0 0 20px #F38851;
+.project-image-container {
+    flex: 0 0 54%;
+    position: relative; 
+    width: 100%;
+    height: 300px; 
+    overflow: hidden;
 }
 
-.project-tools p {
-    color: white;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    padding-bottom: 0.3rem;
-    font-family: 'Rubik', sans-serif;
+.project-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
 }
 
-.project-image-box {
-    position: relative;
-    width:50%;
-}
-
-.project-img-link {
-    display: block;
-    width: 50%;
-    height: 50%;
-}
-
-.project-img-link > img {
-    width: 50%;
-    height: 50%;
+.project-slideshow-image {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 1.2rem 1.2rem 0 0;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
 }
 
 
@@ -1592,6 +1592,75 @@ hr {
     }
 
     .featured-projects-box h2{
+        font-size: 40px;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .projects-container{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .project-description a {
+        margin-top: 10px; /* Optional: space the button slightly */
+    }
+
+    .project-image-container {
+        flex: 0 0 100%;
+        height: auto;  /* Let the height adjust based on content */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .project-description {
+        flex: 0 0 100%; /* Button takes full width (optional) */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+    }
+
+    .project-box{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .project-card{
+        height: auto;
+        padding: 10px;
+    }
+
+    .project-slideshow-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 1s ease-in-out;
+        opacity: 1; /* Ensure visibility on mobile */
+    }
+
+    .project-slideshow-image {
+        position: relative;  /* Changed to relative */
+        width: 100%;
+        height: auto;  /* Ensure height adjusts based on aspect ratio */
+        object-fit: cover;
+        opacity: 1 !important;  /* Force opacity to 1 to ensure images are visible */
+        transition: opacity 1s ease-in-out;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-box{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .project-card{
+        padding:20px;
+    }
+
+    .projects-container h2{
         font-size: 40px;
     }
 }
