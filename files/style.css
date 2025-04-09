@@ -521,18 +521,28 @@ hr {
 }
 
 .project-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover; 
-    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
 }
 
 .project-slideshow-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; 
     transition: opacity 1s ease-in-out;
     opacity: 0;
+}
+
+.project-image-container img.active {
+    opacity: 1;
+    z-index: 1;
 }
 
 
