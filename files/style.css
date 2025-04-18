@@ -222,7 +222,6 @@ body{
 }
 
 .home-container {
-    max-width: 1200px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -325,7 +324,6 @@ body{
 }
 
 .timeline-container {
-    max-width: 1200px;
     width: 100%;
 }
   
@@ -406,6 +404,7 @@ body{
     gap: 2rem;
     margin-left: 5%;
     margin-right: 5%;
+    width: 100%;
 }
 
 .project-cards-box{
@@ -508,6 +507,7 @@ body{
 }
 
 .tools-container {
+    width: 100%;
     margin-left: 10%;
     margin-right: 10%;
     display: grid;
