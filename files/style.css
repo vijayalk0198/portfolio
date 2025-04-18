@@ -825,6 +825,9 @@ body{
     }
 
     /* HOME SECTION */
+    .home-section{
+        padding-top: 7rem;
+    }
     .home-container {
         flex-direction: column;
     }
