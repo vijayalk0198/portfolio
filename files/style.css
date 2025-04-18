@@ -215,7 +215,7 @@ body{
     min-height: 100vh;
     background-color: hsl(228, 15%, 20%);
     color: white;
-    padding: 7rem 1rem;
+    padding: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -320,7 +320,7 @@ body{
 /*======================================== TIMELINE SECTION ========================================*/
 .timeline-section {
     background-color: hsl(228, 15%, 20%);
-    padding: 5rem 5rem;
+    padding: 3rem;
     text-align: center;
 }
 
@@ -392,8 +392,7 @@ body{
   
 /*======================================== PROJECTS SECTION ========================================*/
 .project-section{
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding: 3rem;
     background-color: #222831;
     color:#FFFFFF;
 }
@@ -501,7 +500,7 @@ body{
 .tools-section{
     background-color: #222831;
     color: #fff;
-    padding-bottom: 2rem;
+    padding: 3rem;
     justify-content: center;
     align-items: center;
     min-height: max-content;
@@ -545,8 +544,7 @@ body{
     display: grid;
     align-items: center;
     gap: 3rem;
-    padding: 40px;
-    padding-top: 70px;
+    padding: 3rem;
     justify-content: center;
 }
 
