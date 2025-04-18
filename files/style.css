@@ -219,6 +219,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 6rem;
 }
 
 .home-container {
@@ -412,7 +413,6 @@ body{
     flex-wrap: wrap;
     gap:20px;
     justify-content: center; 
-    width:90%;
     padding:0px;
     margin-top: 24px;
 }
