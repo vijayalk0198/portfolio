@@ -58,8 +58,9 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', checkScroll);
 });
 
+/*========== Timeline Modals ==========*/
 document.addEventListener("DOMContentLoaded", () => {
-    const modals = document.querySelectorAll(".modal");
+    const modals = document.querySelectorAll(".custom-modal");
     const closeButtons = document.querySelectorAll(".close-button");
 
     // Open Modal based on Button Click
@@ -67,17 +68,17 @@ document.addEventListener("DOMContentLoaded", () => {
         let modalId;
     
         switch (type) {
-            case "education":
-                modalId = "modal-education";
+            case "education-be":
+                modalId = "modal-be";
                 break;
-            case "experience":
-                modalId = "modal-experience";
+            case "experience-deloitte":
+                modalId = "modal-deloitte";
                 break;
-            case "certifications":
-                modalId = "modal-certifications";
+            case "experience-rlp":
+                modalId = "modal-rlp";
                 break;
-            case "otherexp":
-                modalId = "modal-otherexp";
+            case "education-msc":
+                modalId = "modal-msc";
                 break;
             default:
                 console.error("Invalid modal type");
@@ -109,17 +110,4 @@ document.addEventListener("DOMContentLoaded", () => {
             if (event.target === modal) closeModal(modal);
         });
     });
-});
-
-/*=========Image SLideshow in Project section===========*/
-const containers = document.querySelectorAll('.project-image-container');
-containers.forEach(container => {
-  const images = container.querySelectorAll('.project-slideshow-image');
-  let current = 0;
-
-  setInterval(() => {
-    images[current].style.opacity = 0;
-    current = (current + 1) % images.length;
-    images[current].style.opacity = 1;
-  }, 5000);
 });
