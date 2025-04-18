@@ -26,7 +26,7 @@ body {
     border-radius: 6px;
 }
 
-/*========================= HEADER - NAVBAR STYLING =====================*/
+/*======================================== HEADER - NAVBAR SECTION ========================================*/
 .header {
     position: fixed;
     top: 0;
@@ -63,12 +63,12 @@ body {
     cursor: pointer;
 }
 
-.navbar {
+.custom-navbar {
     display: flex;
     align-items: center;
 }
 
-.navbar a {
+.custom-navbar a {
     display: inline-block;
     font-size: 20px;
     color: #fff;
@@ -79,14 +79,41 @@ body {
     transition: .3s;
 }
 
-.navbar a:hover {
+.custom-navbar a:hover {
     color: #F38851;
     text-decoration: underline;
 }
 
-.navbar .active {
+.custom-navbar .active {
     color: #F38851;
     text-decoration: underline;
+}
+
+
+@media (max-width: 1024px) {
+    .custom-navbar {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: hsl(228, 15%, 20%);
+      padding: 1rem 0;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  
+    .menu-toggle:checked ~ .custom-navbar {
+      display: flex;
+    }
+  
+    .custom-navbar a {
+      padding: 10px;
+      text-align: center;
+    }
 }
 
 /*========================= HOME SECTION STYLING =====================*/

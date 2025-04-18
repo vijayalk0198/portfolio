@@ -30,17 +30,6 @@ window.onscroll = () => {
     });
 };
 
-
-/*========== Typing animation in home page ==========*/
-var typed = new Typed(".text", {
-    strings: ["Data Wrangling", "Statistical Analysis" , "Dashboard Generation","Machine Learning"],
-    typeSpeed:50,
-    backSpeed:50,
-    backDelay:1000,
-    loop:true
-});
-
-
 /*========== Go top icon in left bottom ==========*/
 const toTop = document.querySelector(".top");
 window.addEventListener("scroll",() =>{
