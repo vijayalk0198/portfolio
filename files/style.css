@@ -232,46 +232,13 @@ body{
     gap: 48px;
 }
 
-.home-left, .home-right {
+.home-centre {
     flex: 1 1 300px;
-    max-width: 500px;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-}
-
-.home-left .profile-img-container {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background-color: red; /* temp background to check shape */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    margin-bottom: 16px;
-}
-  
-.profile-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
-.home-left .home-tagline {
-    font-size: 24px;
-    margin-bottom: 8px;
-    font-weight: 700;
-    letter-spacing: 5px;
-}
-
-.home-left .home-tools {
-    font-size: 16px;
-    color: #aaa;
-    margin-bottom: 24px;
 }
 
 .social-icons a {
@@ -285,30 +252,27 @@ body{
     transform: scale(1.2);
 }
 
-.home-right h2 {
+.home-centre h2 {
     font-size: 32px;
     animation: slideBottom 1s ease forwards;
-    animation-delay: 1s;
 }
       
-.home-right h1 {
+.home-centre h1 {
     font-size: 40px;
     margin: 8px 0;
     animation: slideBottom 1s ease forwards;
-    animation-delay: 1s;
 }
 
-.home-right h1 span{
+.home-centre h1 span{
     font-size: 56px;
     font-weight: 700;
-    color:#F38851
+    color:#F38851;
 }
       
-.home-right p {
+.home-centre p {
     font-size: 16px;
     margin-bottom: 32px;
-    animation: slideBottom 1s ease forwards;
-    animation-delay: 1s;
+    animation: slideTop 2s ease forwards;
 }
 
 .responsive {
