@@ -880,3 +880,28 @@ body{
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 }
+
+/* Prevent horizontal overflow on small screens */
+body, html {
+  overflow-x: hidden;
+}
+
+/* Make padding responsive */
+.home-section {
+  padding: 24px;  /* instead of 48px */
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 5%;  /* reduce side padding */
+  }
+  .home-section {
+    padding: 16px;
+  }
+  .home-container {
+    gap: 24px;
+  }
+  .home-centre h1 span {
+    font-size: 36px; /* scale down big text */
+  }
+}
